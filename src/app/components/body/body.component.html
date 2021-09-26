@@ -1,0 +1,144 @@
+<div>
+    <section>
+        <div class="textbox">
+            <h2>Pipes Angular</h2>
+            <p> Use <span>Pipes</span> to transform strings, currency amounts, dates,
+                and other data for display. Pipes are simple functions
+                you can use in template expressions to accept an input
+                value and return a transformed value. Pipes are useful
+                because you can use them throughout your application,
+                while only declaring each pipe once. For example, you
+                would use a pipe to show a date as April 15, 1988 rather
+                than the raw string format.
+            </p>
+            <a href="https://angular.io/guide/pipes">
+                Ver pagina oficial
+            </a>
+        </div>
+        <div class="imgBox">
+            <tr class="starbucks">
+                <iframe width="560" height="315" [src]="videoTest | videopipe:'https://www.youtube.com/embed/'"
+                    frameborder="2" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </tr>
+        </div>
+    </section>
+    <div>
+      
+    </div> 
+    <table>
+        <tr class="headerColumns">
+            <td>Name Pipe</td>
+            <td>Example</td>
+            <td>Apply</td>
+        </tr>
+        <tr>
+            <td>UpperCasePipe</td>
+            <td>
+                {{stateUpperCase? (cadenaTest | uppercase ):cadenaTest}}
+            </td>
+            <td>
+                <a (click)="stateUpperCase = !stateUpperCase">
+                    {{stateUpperCase?'Restore':'Apply'}}
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>LowerCasePipe</td>
+            <td>
+                {{stateLowerCase? (cadenaTest | lowercase ):cadenaTest}}
+            </td>
+            <td>
+                <a (click)="stateLowerCase = !stateLowerCase">
+                    {{stateLowerCase?'Restore':'Apply'}}
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>SlicePipe</td>
+            <td>
+                {{stateSlicePipe? (cadenaTest | slice:1:5 ):cadenaTest}}
+            </td>
+            <td>
+                <a (click)="stateSlicePipe = !stateSlicePipe">
+                    {{stateSlicePipe?'Restore':'Apply'}}
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>DecimalPipe</td>
+            <td>
+                {{stateDecimalPipe? (numberPi | number ):numberPi}}
+            </td>
+            <td>
+                <a (click)="stateDecimalPipe = !stateDecimalPipe">
+                    {{stateDecimalPipe?'Restore':'Apply'}}
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>PercentPipe</td>
+            <td>
+                {{ statePercentPipe ? (numberPi | percent:'2.2-2'):numberPi }}
+            </td>
+            <td>
+                <a (click)="statePercentPipe = !statePercentPipe">
+                    {{statePercentPipe?'Restore':'Apply'}}
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>CurrencyPipe</td>
+            <td>
+                {{ stateCurrencyPipe? (salaryTest | currency:'COP ':'symbol':'.0-0') : salaryTest }}
+            </td>
+            <td>
+                <a (click)="stateCurrencyPipe = !stateCurrencyPipe">
+                    {{stateCurrencyPipe?'Restore':'Apply'}}
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>AsyncPipe</td>
+            <td>
+                {{ !statePromisePipe ? (promise | async):''}}
+            </td>
+            <td>
+               {{ (promise | async)?"Aplied":"Applying.."}}
+            </td>
+            
+        </tr>
+        <tr>
+            <td>DatePipe</td>
+            <td>
+                {{ dateTest | date:formatDate }}
+            </td>
+            <td>
+                <a (click)="toggleFormat()">
+                    {{stateDate?'Restore':'Apply'}}
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>JSONPipe</td>
+            <td>
+                <pre>{{stateJsonPipe? (object | json):object }}</pre>  
+            </td>
+            <td>
+                <a (click)="stateJsonPipe = !stateJsonPipe">
+                    {{stateJsonPipe?'Restore':'Apply'}}
+                </a>
+            </td>
+        <tr>
+            <td>Password Pipe Custom</td>
+            <td>
+                {{ cadenaTest | viewPasswordPipe:statePasswordPipe }}
+            </td>
+            <td>
+                <a (click)="statePasswordPipe = !statePasswordPipe">
+                    {{statePasswordPipe?'Restore':'Apply'}}
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>

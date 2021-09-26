@@ -1,0 +1,112 @@
+div{
+    width: 100%;
+    min-width: 40%;
+}
+section{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+section .textbox{
+    margin-top: 50px;
+    margin-left: 150px;
+    position: relative;
+}
+section .textbox h2{
+    color: #333;
+    font-size: 3em;
+    line-height: 1.4em;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+section .textbox p{
+    width: 500px;
+    text-align: justify;
+}
+section .textbox p span{
+    text-transform: capitalize;
+    color: #d4373a;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+section .textbox a{
+    display: inline-block;
+    text-decoration: none;
+    text-transform:capitalize;
+    cursor: pointer;
+    background: #d4373a;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 40px;
+    margin-top: 15px;
+}
+section .imgBox{
+    display: flex;
+    flex-direction: column;
+    padding-right: 0px;
+    margin-top: 50px;
+    margin-right: 60px;
+}
+section .imgBox .starbucks{
+    position: relative;
+}
+section .imgBox .starbucks iframe{
+    border-radius: 40px;
+    box-shadow: 10px 10px 10px #666666;
+}
+table{
+    display: table;
+    margin-left: 140px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+table tr{
+    display: flex-column;
+}
+table .headerColumns{
+    font-weight: bold;
+}
+table tr td{
+    position: relative;
+    display: flex-column;
+    padding: 8px 15px;
+    border-bottom: solid 1px#5a5a5a;
+}
+table tr td a{
+    cursor: pointer;
+    background: rgb(18, 165, 223);
+    color: white;
+    border-radius: 20px;
+    border: solid 1px #666666;
+    padding: 4px 10px;
+}
+table tr td input{
+    display: block;
+    cursor:text;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    width: 20px;
+    min-width: 50px;
+    border-radius: 20px;
+    border: solid 1px #666666;
+    padding: 5px 10px;
+    outline: none;
+    text-align: center;
+}
+table tr td a:hover{
+    cursor: pointer;
+    background: cornflowerblue;
+    color: white;
+    border-radius: 20px;
+    padding: 4px 10px;
+}
+table tr td a:hover:after{
+    cursor: pointer;
+    background: rgb(5, 8, 14);
+    color: white;
+    border-radius: 20px;
+    padding: 4px 6px;
+}
+
