@@ -10,7 +10,7 @@ This is an example of a project with angular using pipes
 ### 🦀 Home
 
 <div align="center">
-  <img src="./src/assets/image/screenshot.png" width="1000" style="border-radius: 10px; border: solid 1px #333fff"/>
+  <img src="./src/assets/img/screenshot.png" width="1000" style="border-radius: 10px; border: solid 1px #333fff"/>
 </div>
 
 ## 👾 To get started
